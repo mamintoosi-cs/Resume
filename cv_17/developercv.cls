@@ -74,6 +74,13 @@
 %\usepackage[default]{gillius}
 %\usepackage{roboto}
 
+
+% Morteza added this packages
+
+\usepackage{graphicx}
+% end add package by Morteza
+
+
 \renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
 
 %------------------------------------------------
@@ -88,7 +95,7 @@
 }
 
 \newcommand{\iconWhite}[3]{% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	\vcenteredhbox{\makebox(#2, #2){\large\csname fa#1\endcsname}}% Icon and box
+	\vcenteredhbox{\fbox{\colorbox{white}{\makebox(#2, #2){\textcolor{black}{\large\csname fa#1\endcsname}}}}}
 	\hspace{0.2cm}% Whitespace
 	\vcenteredhbox{\textcolor{black}{#3}}% Text
 }
@@ -156,10 +163,12 @@
 	\setcounter{a}{0}
 	\setcounter{c}{150}
 	
-	\begin{tikzpicture}[scale=3]
+	\begin{tikzpicture}[scale=2]
 		\foreach \p/\t in {#1} {
+
 			\addtocounter{a}{1}
-			\bubble{\thea/2}{\theb}{\p/25}{\t}{1\p0}
+			\bubble{\thea/1}{\theb}{\p/25}{\t}{1\p0}
+
 		}
 	\end{tikzpicture}
 }
@@ -202,11 +211,16 @@
 		#1 % Leftmost entry date(s) text
 	}%
 	&\parbox[t]{0.825\textwidth}{% 82.5% of the text width of the page
-		\textbf{#2}% Entry heading text
+		\textbf{\Large{#2}}% Entry heading text
 		\hfill% Horizontal whitespace
 		{\footnotesize \textbf{\textcolor{black}{#3}}}\\% Right-aligned entry qualifier text
 		#4 % Entry description text
 	}\\\\}
 
 % Command to output a separator slash between lists, e.g. '  /  '
-\newcommand{\slashsep}{\hspace{3mm}/\hspace{3mm}}
+\newcommand{\slashsep}{\hspace{2mm}/\hspace{2mm}}
+
+
+\newcommand{\someExp}[2]{
+	\textbf{#1}\hfill#2
+}
