@@ -1,5 +1,5 @@
 
-###Resume Template Created By Morteza Jalambadani
+## Resume Template
 ---
 This Template Extended From 
 [<b>Jan Vorisek</b> Template](http://www.latextemplates.com/template/developer-cv) and add some item to it.
