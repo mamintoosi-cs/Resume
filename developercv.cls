@@ -221,6 +221,12 @@
 \newcommand{\slashsep}{\hspace{2mm}/\hspace{2mm}}
 
 
-\newcommand{\someExp}[2]{
-	\textbf{#1}\hfill#2
+\newcommand{\someExp}[3]{
+	#1 \textbf{(#3)} \hfill#2
+}
+
+% Command to output section title headings
+\newcommand{\DataScExp}[1]{% The only parameter is the section text
+ % Whitespace before the section title
+\colorbox{gray!50}{\textcolor{black}{\textbf{\space\space\space#1\space\space\space}}}\\% Section title
 }
